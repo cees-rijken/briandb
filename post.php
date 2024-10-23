@@ -2,7 +2,7 @@
     error_reporting(E_ALL);
     ini_set("display_errors", 1);
 
-    $token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwibmFtZSI6IkNlZXMiLCJlbWFpbCI6ImhhbGxvQGNlZXNyaWprZW4ubmwiLCJwYXNzIjoid3dhY2h0In0.av6LlV1cZIpbnB-Iryiam1lxkP6fiDDfttoB82vSCTE";
+    $token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
     //$data = array("token" => $token, "transaction" => "CREATE TABLE Persons (PersonID int, LastName varchar(255), FirstName varchar(255))", "returnvalue" => "");
     //$data = array("token" => $token, "transaction" => "select * from Persons", "returnvalue" => "fetchAll");
     $data = array("token" => $token, "transaction" => "show tables", "returnvalue" => "fetchAll");    
@@ -10,7 +10,7 @@
     //$data = array("token" => $token, "transaction" => "FILELIST","returnvalue" => "");
     $postdata = json_encode($data);
     
-    $ch = curl_init('https://crm.ceesrijken.nl/v1/'); // Initialise cURL
+    $ch = curl_init('https://yourowndomain.nl/v1/'); // Initialise cURL
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
